@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+  
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+:root{
+    --blue: #0033ff;
+    --white: #ffffff;
+    --white-1 : #ddd;
+    --gray-dark: #343a40;
+    --gray-dark-1: #555555;
+    --dark: #000;
+    --red: #ff0033;
+    --red-02: #e00;
+}
+.btn{
+    border: none;
+    border-radius: 5px;
+    
+    line-height: 30px;
+}
+.btn-primary{
+    background: var(--white-1);
+    color: var(--gray-dark-1) ;
+}
+#nav-bar{
+    background-color: var(--white);  
+    width: 80%;
+    margin: 0 auto;
+    text-decoration: none;
+   
+}
+.menu-level-1{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item-level-1{
+    padding: 16px 20px;
+  
+}
+.item-level-1 a,i{
+    color: var(--gray-dark);
+    font-size: 16px;
+    line-height: 20px;
+}.item-level-1:hover{
+    background-color: var(--white-1);
+}
+.item-level-1:hover .menu-level-2{
+    display: block;
+}
+.item-level-1:last-child{
+    margin-left: auto;
+}
+.menu-level-2{
+    border: 1px solid rgb(235, 240, 241);
+    border-radius: 4px;
+    position: absolute;
+    top: 52px;
+   display: none;
+   background-color: var(--white);
+   z-index: 1;
+}
+.menu-level-2 a{
+    color: var(--dark);
+   
+}
+.menu-level-2 .item-level-2{
+    padding: 16px 20px;
+}
+.menu-level-2 .item-level-2:hover{
+    text-decoration: underline;
+}
+#slider{
+    width: 80%;
+    margin: 0 auto;
+
+}
+#product{
+   width: 80%;;
+    margin: auto;
+    margin-top: 50px;
+}
+.items{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ column-gap: 20px;
+}
+.item-thumb img{
+    width: 100%;
+}
+#product .items .item{
+    border: 1x solid #ddd;
+    box-shadow: 1px 2px 4px #ddd ;
+    padding: 20px;
+    border-radius: 5px;
+}
+#product .items .item .item-title{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+}
+#product .items .item .item-price{
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--red);
+    text-decoration: underline;
+}
+#product .items .item .btn{
+    margin-left: auto;
+    display: block;
+}
+.items .hiddenId{
+    display: none;
+}
+footer{
+    margin-top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--white);
+}

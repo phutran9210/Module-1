@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.addProduct{
+    width: 50%;
+    border: 1px solid #ddd;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+.addProduct label,input{
+    width: 100%;
+    display: block;
+}
+.addProduct label{
+   margin-top: 5px;
+
+}
+.addProduct input{
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    line-height: 25px;
+   
+}
+.addProduct button{
+    
+}
+.addProduct h2{
+    text-align: center;
+    color: red;
+}

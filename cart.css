@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table thead{
+ text-align: center;
+}
+tbody img{
+    width: 100px;
+    height: 80px;
+}
+tbody input{
+    width: 30px;
+}
