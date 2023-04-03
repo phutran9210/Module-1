@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css">
+    
 </head>
 
 <body>
     <div class="listCart">
-        <form action="">
+      
             <table>
                 <thead>
                     <tr>
@@ -26,13 +28,58 @@
                         <td><img style="width: 100%;" > src="" alt=""></td>
                         <td><span></span></td>
                         <td><input value="1" type="number"></td>
-                        <td><button>Xóa</button></td>
+                        <td><button class="cartDelete">Xóa</button></td>
                     </tr> -->
                 </tbody>
+                <tfoot>
+                    <td>Tổng tiền</td>
+                    <td id="totalPrice">0</td>
+                   <td><button onclick="payment()" type="button" class="btn btn-primary" id="buy-button">Buy</button></td>
+                </tfoot>
             </table>
-        </form>
+        
     </div>
-    <script  src="cart.js"></script>
+    <div id="checkoutModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Nhập thông tin thanh toán</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="nameInput">Họ tên</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Nhập họ tên">
+                </div>
+                <div class="form-group">
+                    <label for="address">Địa chỉ nhận hàng</label>
+                    <input type="text" class="form-control" id="addressInput" placeholder="Nhập địa chỉ">
+                  </div>
+                <div class="form-group">
+                  <label for="emailInput">Email</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="Nhập email">
+                </div>
+                <div class="form-group">
+                  <label for="phoneInput">Số điện thoại</label>
+                  <input type="tel" class="form-control" id="phoneInput" placeholder="Nhập số điện thoại">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-primary" id="submitBtn">Xác nhận thanh toán</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <script src="jQuerry/jquery-3.6.4.min.js"></script>
+      <script src="bootstrap-5.3.0-alpha2-dist/js/bootstrap.min.js"></script>
+      <script  src="cart.js"></script>
 </body>
 
 </html>

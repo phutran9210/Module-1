@@ -96,7 +96,26 @@
         </table>
     </form>
     <script src="signin.js">
-       
+
+    </script>
+    <script>
+        function initialize() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            console.log("???");
+            const adminUser = {
+                username: 'adminUser',
+                password: '123456',
+                email: 'none',
+                isAdmin: true
+            }
+            if (!users.some(user => user.username === adminUser.username)) {
+                users.push(adminUser);
+                localStorage.setItem('users', JSON.stringify(users));
+
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initialize);
+     
     </script>
 </body>
 

@@ -1,22 +1,78 @@
-*{
+/* Thiết lập các giá trị mặc định cho trang */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-form{
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    text-align: center;
 }
 
-table thead{
- text-align: center;
+/* Định dạng cho thẻ table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
-tbody img{
-    width: 100px;
-    height: 80px;
+
+/* Định dạng cho tiêu đề bảng */
+thead th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
 }
-tbody input{
-    width: 30px;
+
+/* Định dạng cho các hàng trong bảng */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Định dạng cho các ô trong bảng */
+td {
+    padding: 10px;
+}
+
+/* Định dạng cho hình ảnh sản phẩm */
+td img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Định dạng cho nút Xóa */
+td button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Định dạng cho nút Buy */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Định dạng cho phần tổng tiền */
+tfoot td {
+    font-weight: bold;
 }

@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* styles.css */
+    /* styles.css */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .custom-alert {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #00ff00;
+      color: #160042;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s, fadeOut 0.5s 4s forwards;
+    }
+
+    .message {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .close-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #160042;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .close-btn:hover {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+    }
+
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="jQuerry/jquery-3.6.4.min.js">
+</head>
+
+<body>
+
+
+  <body>
+
+    <div id="customAlert" class="custom-alert hidden">
+      <span class="message"></span>
+      <button class="close-btn" onclick="closeCustomAlert()">Đóng</button>
+    </div>
+    <script>
+
+
+      function showCustomAlert(message) {
+        const customAlert = document.getElementById("customAlert");
+        const messageElement = customAlert.querySelector(".message");
+        messageElement.textContent = message;
+        customAlert.classList.remove("hidden");
+      }
+
+      function closeCustomAlert() {
+        const customAlert = document.getElementById("customAlert");
+        customAlert.classList.add("hidden");
+      }
+
+      showCustomAlert("Vui lòng đăp nhập để mua hàng");
+    </script>
+  </body>
+
+</html>
+
+</body>
+
+</html>

@@ -7,23 +7,40 @@
     <link rel="stylesheet" href="./adminPage.css">
 </head>
 <body>
-    <div class="addProduct">
+    <form class="addProduct">
         <h2> THÊM SẢN PHẨM</h2>
-        <label for="img">Hình ảnh sản phẩm</label>  
-        <input id="imgProduct" type="text"> 
-        <input type="file"> <span style="color: red;"><i>Vui lòng chọn định dạng JPG, JPN</i></span>
-      
+        <label for="imgOnline">Hình ảnh sản phẩm</label>  
+        <input  id="imgProduct" type="text"> 
+        <input id="imgOffline"  type="file" accept="image/*"> <span style="color: red;"><i>Vui lòng chọn định dạng JPG, JPN</i></span>
+        <label for="">Số lượng sản phẩm</label>
+        <input id="slProduct" type="number">
         <label for="img">Tên sản phẩm</label>
         <input id="nameProduct" type="text"> 
         <label for="img">Mã số sản phẩm</label>
         <input id="idProduct" type="text"> 
         <label for="img">Giá sản phầm</label>
-        <input id="imgProduct" type="text"> 
-        <button onclick="confirmProduct()">Xác nhận</button>
-    </div>
+        <input id="costProduct" type="text"> 
+        <button type="button" onclick="confirmProduct()">Xác nhận</button>
+        <button type="button" onclick="reset()">Reset</button>
+    </form>
     <div class="editProduct">
-        
+        <H2>Tìm kiếm và chỉnh sửa sản phẩm</H2>
+        <button onclick="find()" type="button">Tìm kiếm </button>
+        <input id="findValue" type="text" placeholder="Nhập mã sản phẩm muốn tìm">
+        <label for="">Hình ảnh sản phẩm</label>  
+        <input  id="edit-imgProduct" type="text"> 
+        <input id="edit-imgOffline"  type="file" accept="image/*"> <span style="color: red;"><i>Vui lòng chọn định dạng JPG, JPN</i></span><br>
+        <label for="">Số lượng sản phẩm</label>
+        <input id="edit-slProduct" type="number">
+        <label for="img">Tên sản phẩm</label>
+        <input id="edit-nameProduct" type="text"> 
+        <label for="img">Mã số sản phẩm</label>
+        <input id="edit-idProduct" type="text"> 
+        <label for="img">Giá sản phầm</label>
+        <input id="edit-costProduct" type="text"> 
+        <button onclick="confirmEdited()" type="button">Confirm</button>
+        <button style="background-color: red;" onclick="deleteEditedProduct()">Xóa sản phẩm</button>
     </div>
-
+    <script src="adminPage.js"></script>
 </body>
 </html>

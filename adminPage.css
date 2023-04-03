@@ -25,10 +25,74 @@
     line-height: 25px;
    
 }
-.addProduct button{
+/* .addProduct button{
     
-}
+} */
 .addProduct h2{
     text-align: center;
     color: red;
+}
+.editProduct{
+    width: 50%;
+    border: 1px solid #ddd;
+    margin: auto;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* Định dạng cho khung chứa chỉnh sửa sản phẩm */
+.editProduct {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Định dạng cho tiêu đề phần chỉnh sửa sản phẩm */
+.editProduct h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho các nhãn và các trường nhập liệu */
+.editProduct label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.editProduct input[type="text"],
+.editProduct input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.editProduct input[type="file"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Định dạng cho các nút bấm */
+.editProduct button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.editProduct span {
+    display: block;
+    margin-bottom: 5px;
 }
